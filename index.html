@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دوائي</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      direction: rtl;
+    }
+    header {
+      background-color: #0275d8;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    button {
+      background-color: #5cb85c;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    section {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    select, input[type="range"] {
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>تطبيق دوائي</h1>
+    <p>مساعدة كبار السن في قراءة وصفة العلاج وفهم الأعراض الجانبية</p>
+  </header>
+
+  <section>
+    <h2>مسح باركود الدواء</h2>
+    <button onclick="alert('ميزة مسح الباركود غير متاحة حالياً بدون إنترنت')">بدء المسح</button>
+  </section>
+
+  <section>
+    <h2>معلومات الدواء</h2>
+    <p><strong>اسم الدواء:</strong> فيفادول</p>
+    <p><strong>طريقة الاستخدام:</strong> تناول قرص واحد كل 4 إلى 6 ساعات</p>
+    <p><strong>الآثار الجانبية المحتملة:</strong> غثيان، طفح جلدي</p>
+  </section>
+
+  <section>
+    <h2>الإعدادات</h2>
+    <label for="lang">اللغة:</label>
+    <select id="lang">
+      <option>العربية</option>
+      <option>English</option>
+    </select>
+
+    <label for="voice">تشغيل القراءة الصوتية:</label>
+    <input type="checkbox" id="voice" checked>
+
+    <label for="font-size">حجم الخط:</label>
+    <input type="range" id="font-size" min="12" max="24" value="16" onchange="document.body.style.fontSize = this.value + 'px';">
+  </section>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2025</p>
+  </footer>
+</body>
+</html>
